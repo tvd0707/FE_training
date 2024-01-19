@@ -1,0 +1,89 @@
+{
+  "book-room": [
+    {
+      "time": "14 gio",
+      "fullName": "Đạt Trần Vũ",
+      "phone": "0364759037",
+      "email": "DATTV.B19VT084@stu.ptit.edu.vn",
+      "services": [
+        "wifi",
+        "breakfast",
+        "lunch"
+      ],
+      "date": [
+        "01/12/2023",
+        "02/12/2023"
+      ],
+      "gift": "voucher",
+      "id": 1
+    }
+  ],
+  "rooms": [
+    {
+      "name": "B122",
+      "quantityBed": 1,
+      "quantityPeople": 1,
+      "description": "1",
+      "utils": [
+        "Nong lanh"
+      ],
+      "status": true,
+      "typeRoom": false,
+      "id": 4
+    },
+    {
+      "name": "aa1",
+      "quantityBed": 5,
+      "quantityPeople": 10,
+      "description": "123",
+      "utils": [
+        "Wifi",
+        "Nong lanh",
+        "Dieu hoa"
+      ],
+      "status": false,
+      "typeRoom": true,
+      "id": 5
+    },
+    {
+      "name": "123",
+      "quantityBed": 10,
+      "quantityPeople": 10,
+      "description": "123",
+      "utils": [
+        "Wifi"
+      ],
+      "status": true,
+      "typeRoom": true,
+      "id": 6
+    },
+    {
+      "name": "c123",
+      "quantityBed": 1,
+      "quantityPeople": 1,
+      "description": "12",
+      "utils": [
+        "Wifi",
+        "Nong lanh",
+        "Dieu hoa"
+      ],
+      "status": true,
+      "typeRoom": true,
+      "id": 7
+    },
+    {
+      "name": "d123",
+      "quantityBed": 3,
+      "quantityPeople": 5,
+      "description": "12",
+      "utils": [
+        "Wifi",
+        "Nong lanh",
+        "Dieu hoa"
+      ],
+      "status": true,
+      "id": 8,
+      "typeRoom": true
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="listUser" class="user-list"></div>
+    <script>
+        let infoUser = {
+            fullName: "Tran Vu Dat",
+            email: "tvd0707@gmail.com",
+            age: 18
+        };
+
+        let infoUserJSON = `
+        {
+            "fullName": "Tran Vu Dat",
+            "email": "tvd0707@gmail.com",
+            "age": 18
+        }`;
+
+        console.log(infoUserJSON);
+
+        let infoUserJSONtoJS = JSON.parse(infoUserJSON);
+        console.log(infoUserJSONtoJS);
+
+        let infoUserJStoJSON = JSON.stringify(infoUser);
+        console.log(infoUserJStoJSON);
+
+        let jsonArray = `
+        [
+            {
+                "id": 1,
+                "name": "A",
+                "email": "a@gmail.com"
+            },
+            {
+                "id": 2,
+                "name": "B",
+                "email": "a@gmail.com"
+            },
+            {
+                "id": 3,
+                "name": "C",
+                "email": "a@gmail.com"
+            }
+        ]
+        `;
+
+        let listUser = JSON.parse(jsonArray);
+
+        let htmls = "";
+
+        // listUser.forEach(element => {
+        //     console.log(element);
+        // });
+
+        listUser.forEach(element => {
+            htmls += `
+            <div class="inner-name">${element.name}</div>
+            <div class="inner-email">${element.email}</div>              
+            </div>`;
+        });
+
+        const divUserList = document.querySelector("#listUser");
+        divUserList.innerHTML = htmls;
+        // console.log(htmls);
+    </script>
+</body>
+
+</html>

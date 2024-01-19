@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="ads"></div> -->
+    <!-- <script>
+        const div = document.createElement("div");
+        div.innerHTML = "QC";
+
+        setInterval(() => {
+            const divAds = document.querySelector("#ads");
+            divAds.appendChild(div);
+        },10000)
+    </script> -->
+
+    <!-- <script>
+        const div = document.createElement("div");
+        const text = document.createTextNode("QC2");
+        div.appendChild(text);
+
+        setTimeout(() => {
+            const divAds = document.querySelector("#ads");
+            divAds.appendChild(div);
+        },5000);
+    </script> -->
+
+    <ul id="menu">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    <button id="buttonAdd">Them moi</button>
+
+    <script>
+        const menu = document.querySelector("#menu");
+        const buttonAdd = document.querySelector("#buttonAdd");
+
+        buttonAdd.onclick = function () {
+            const firstElement = menu.firstElementChild;
+            const newItem = document.createElement("li");
+            newItem.innerHTML = "Them moi";
+            // menu.appendChild(newItem);
+            // menu.insertBefore(newItem, firstElement);
+        }
+
+        const listItem = menu.querySelectorAll("li");
+
+        // [...listItem].forEach(item => {
+        //     console.log(item);
+        //     item.onclick = function() {
+        //         menu.removeChild(item);
+        //     }
+        // });
+
+        [...listItem].forEach(item => {
+            item.onclick = function () {
+                const newItem = document.createElement("li");
+                newItem.innerHTML = "Item moi";
+                menu.replaceChild(newItem, item);
+            }
+        });
+    </script>
+</body>
+
+</html>

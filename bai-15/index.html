@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="script.js">
+</head>
+
+<body>
+    <!-- <button>
+        Click me
+    </button>
+    <script>
+        var infoUser = {
+            fullName: "Tran Vu Dat",
+            age: 18,
+            email: "tvd@gmail.com",
+        };
+
+        for(key in infoUser) {
+            console.log(infoUser[key]);
+        }
+    </script> -->
+    <button onclick="login()">Click</button>
+    <button onclick="deleteInfo()">Xoa Info</button>
+    <!-- <button onclick="closeTab()">Close</button> -->
+    <!-- <script>
+        console.log(window);
+        let tab;
+        function openTab() {
+            tab = window.open("http://127.0.0.1:5500/bai-15/index2.html", "_blank", "width=1200, height=600, top=200, left=300")
+        }
+        function closeTab() {
+            tab.close();
+        }
+
+        let screenWidth = window.screen.width;
+        let screenHeight = window.screen.height;
+        
+        setTimeout(() => {
+            console.log(screenWidth);
+            console.log(screenHeight);
+        }, 5000);
+    </script> -->
+
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function deleteCookkie(cname) {
+            document.cookie = `${cname}=; expires=Thu, 01 Jan 1970 00:00:00 UTC`;
+        }
+
+        function login() {
+            if (true) {
+                document.cookie = 'token=asdasdf';
+                document.cookie = 'name=asdasaddsdf';
+            }
+        }
+
+        function deleteInfo() {
+            deleteCookkie("name");
+            deleteCookkie("token");
+        }
+    </script>
+</body>
+
+</html>

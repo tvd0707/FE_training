@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .light {
+            background: lightblue;
+        }
+
+        .dark {
+            background: darkblue;
+            color: #fff;
+        }
+
+        .test-2 {
+            color: blue;
+        }
+
+        .box-1 .box-2 h2 .link {
+            background: yellow;
+        }
+
+        .box-1 .box-2 h2 .link.active {
+            background: orange;
+        }
+    </style>
+
+    <div class="light" id="box">Content</div>
+
+    <ul id="menu">
+        <li>index 1</li>
+        <li>index 2</li>
+        <li>index 3</li>
+    </ul>
+
+    <h2>1</h2>
+    <h2>2</h2>
+    <h2>3</h2>
+    <h2>4</h2>
+    <h2>5</h2>
+
+    <h3 class="test">01</h3>
+    <h4 class="test">02</h4>
+    <h2 class="test">03</h2>
+    <h1 class="test">04</h1>
+    <h5 class="test">05</h5>
+
+    <div class="box-1">
+        <div class="box-2">
+            <h2>
+                <a href="#" class="link">Content 1</a>
+            </h2>
+
+            <h2>
+                <a href="#" class="link">Content 2</a>
+            </h2>
+        </div>
+    </div>
+
+    <div class="product-item" data-id="12345" data-category="123">
+        price 
+        detail
+    </div>
+
+    <div class="product-item" data-id="122875" data-category="123">
+        price 
+        detail
+    </div>
+
+    <script>
+        // const box = document.getElementById("box");
+        // box.classList.add("dark");
+        // console.log(box);
+
+        // const menu = document.getElementById("menu");
+        // console.log(menu);
+
+        // const listh2 = document.getElementsByTagName("h2");
+        // console.log(listh2);
+
+        // const listTest = document.getElementsByClassName("test");
+        // // listTest.forEach((item) => {
+        // //     console.log(item);
+        // // });
+        // [...listTest].forEach(item => {
+        //     item.classList.add("test-2");
+        //     item.classList.remove("test-2");
+        // });
+        // console.log(...listTest);
+
+        // const element = document.querySelectorAll(".box-1 .box-2 h2 .link");
+        // // element.classList.add("test-2");
+        // [...element].forEach(item => {
+        //     item.classList.add("test-2");
+        // });
+        // console.log(element);
+
+        // const menu = document.querySelector("#menu");
+        // console.log(menu.innerHTML);
+        // console.log(menu.textContent);
+        // console.log(menu.innerText);
+
+            let cart = [];
+
+        const producList = document.querySelectorAll(".product-item");
+        [...producList].forEach(item => {
+            const dataId = item.getAttribute("data-id");
+            cart.push(dataId);
+            item.setAttribute("data-category", "234");
+            console.log(dataId);
+            console.log(item);
+        })
+        console.log(cart);
+    </script>
+</body>
+</html>

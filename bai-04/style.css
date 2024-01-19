@@ -1,0 +1,13 @@
+.mau {
+    color: #ff5e8e;
+    text-align: center;
+    font-size: 40px;
+}
+
+.bg-img {
+    background-image: url(img/download.png);
+    width: 1200px;
+    height: 700px;
+    border: 5px solid #000;
+    background-size: cover;
+}

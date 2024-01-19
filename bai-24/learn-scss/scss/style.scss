@@ -1,0 +1,145 @@
+@import "variable";
+@import "mixins";
+
+%button {
+    background: #c9c9c9;
+    color: #000;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.button--red {
+    @extend %button;
+    background: $color-red;
+    color: $color-white;
+}
+
+.button--green {
+    @extend %button;
+    background: green;
+    color: white;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include display-flex;
+
+    &__item {
+        margin: 0 30px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-gray;
+
+        &--active {
+            color: $color-green;
+        }
+
+        &--disabled {
+            color: #ddd;
+            cursor: no-drop;
+        }
+
+        &:hover {
+            color: $color-red;
+        }
+    }
+}
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include display-flex;
+    @include flex-wrap;
+
+    &__item {
+        margin: 0 5px;
+
+        &--active {
+            color: #c30000;
+        }
+    }
+
+    &__link {
+        color: $color-gray;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 6px 10px;
+        @include border-radius(12px);
+    }
+
+    &__item--disabled &__link {
+        color: #ddd;
+        cursor: no-drop;
+    }
+
+    &__item--active &__link {
+        color: $color-red;
+    }
+}
+
+.box {
+    position: relative;
+    background: yellow;
+    width: 100%;
+    height: 500px;
+    @include border-radius(10px);
+
+    &__item {
+        background: orange;
+        width: 100%;
+        height: 50px;
+
+        &--one {
+            @include pos-abs("top-left", 10px, 10px);
+        }
+
+        &--two {
+            @include pos-abs("top-right", 20px, 20px);
+        }
+
+        &--three {
+            @include pos-abs("bottom-left", 30px, 30px);
+        }
+
+        &--four {
+            @include pos-abs("bottom-right", 40px, 40px);
+        }
+    }
+}
+
+@for $i from 0 through 10 {
+    .opacity-#{$i} {
+        opacity: 0.1*$i;
+    }
+}
+
+
+$i: 0;
+$length: 100;
+
+@while ($i <=$length) {
+    .mb-#{$i} {
+        margin-bottom: $i + px;
+    }
+    $i: $i + 5;
+}
+
+.btn {
+    background: #ddd;
+    color: #000;
+}
+
+$colors: ("blue", "#4a4afa", "#fff"), ("red", "#e15b5b", "#000"), ("orange", "#f0af38", "#000");
+@each $label, $bg, $color in $colors{
+    .btn--#{item} {
+        background: $bg;
+        color: $color;
+    }
+}
